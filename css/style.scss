@@ -1,0 +1,194 @@
+$color-blue: #0153a6;
+$color-green: #7ea59c;
+$color-yellow: #f7e641;
+$color-bege: #dfddd0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #edeae0;
+}
+
+.color-box {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+}
+
+.color-blue {
+  background-color: $color-blue;
+  width: 8rem;
+  height: 1.5rem;
+}
+.color-green {
+  background-color: $color-green;
+  width: 8rem;
+  height: 1.5rem;
+}
+.color-yellow {
+  background-color: $color-yellow;
+  width: 8rem;
+  height: 1.5rem;
+}
+.article-box {
+  margin: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.spain {
+  font-weight: 700;
+}
+p {
+  font-size: 24px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title-main {
+  font-size: 6rem;
+  margin: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.img-chandler,
+.img-pheobe,
+.img-jennifer,
+.img-ross,
+.img-monica,
+.img-joe {
+  width: 25rem;
+  height: 25rem;
+  object-fit: contain;
+}
+
+.photo-box {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  grid-template-areas:
+    "a b c"
+    "xl xl xl"
+    "d e f";
+}
+
+.img-jennifer {
+  grid-area: a;
+  background-color: $color-blue;
+}
+.img-chandler {
+  grid-area: b;
+  background-color: $color-green;
+}
+.img-monica {
+  grid-area: c;
+  background-color: $color-yellow;
+}
+.photo-title {
+  grid-area: xl;
+  text-align: center;
+  font-size: 4rem;
+  letter-spacing: 0.3rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: $color-bege;
+}
+.img-ross {
+  grid-area: d;
+  background-color: $color-bege;
+}
+.img-pheobe {
+  grid-area: e;
+  background-color: $color-bege;
+}
+.img-joe {
+  grid-area: f;
+  background-color: $color-bege;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-block: 1rem;
+  margin-right: 7.1rem;
+  gap: 1rem;
+}
+li {
+  list-style-type: none;
+  letter-spacing: 0.3rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (min-width: 480px) and (max-width: 820px) {
+  .img-chandler,
+  .img-pheobe,
+  .img-jennifer,
+  .img-ross,
+  .img-monica,
+  .img-joe {
+    width: 15rem;
+    height: 15rem;
+    margin: 0;
+  }
+  .photo-box {
+    margin: 1rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  .list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 550px) {
+  .color-blue,
+  .color-green,
+  .color-yellow {
+    width: 4rem;
+    height: 1rem;
+  }
+
+  p {
+    font-size: 16px;
+  }
+  .title-main {
+    font-size: 3rem;
+  }
+  .photo-title {
+    font-size: 2rem;
+  }
+  .img-chandler,
+  .img-pheobe,
+  .img-jennifer,
+  .img-ross,
+  .img-monica,
+  .img-joe {
+    width: 10rem;
+    height: 10rem;
+  }
+  .img-ross {
+    background-color: rgb(221, 134, 52);
+  }
+  .photo-box {
+    margin-inline: 2rem;
+    grid-template-areas:
+      "a b "
+      "c d "
+      "xl xl "
+      " e f";
+  }
+  .list {
+    margin-inline: 10px;
+  }
+  li {
+    font-size: 0.9rem;
+  }
+}
